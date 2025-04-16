@@ -110,6 +110,7 @@ nav.top ul a.link-btn.menu {
   border-radius: 50px;
   padding: 10px 14px;
   opacity: 0;
+  display: none;
 }
 nav.top ul a.link-btn:hover {
   color: rgba(24, 24, 26, 1);
@@ -191,7 +192,7 @@ header .page-banner a:hover, header .page-banner a:focus {
   cursor: zoom-in;
 }
 header .page-banner picture, header .page-banner video {
-  background-color: #EEE;
+  /*background-color: #EEE;*/
   display: flex;
   width: 100%;
   height: 64vh;
@@ -317,13 +318,17 @@ section.content figure img {
 
 section.content ul {
   list-style-type: none;
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 section.content ul li {
-flex: 1;
-margin: 5px;
-padding: 5px;
+  flex: 1;
+  margin: 5px;
+  padding: 5px;
+}
+section.content ul li span {
+  color: #65f242;
+  font-size: 3rem;
 }
 
 
@@ -413,6 +418,48 @@ footer .network a:hover, footer .network a:focus {
   color: #EEE;
   fill: #EEE;
 }
+
+@media (max-width: 768px) {
+  nav.top ul a {
+    display: none;
+  }
+  nav.top ul a.link-btn.menu  {
+    display: block;
+    opacity: 1;
+  }
+  div.page-hero p, div.page-hero span {
+    font-size: 48px;
+    line-height: 45px;
+  }
+  div.page-hero span {
+    width: 85px;
+  }
+  div.hr div {
+    display: grid;
+  }
+  header .page-banner picture, header .page-banner video {
+    max-height: 275px;
+  }
+  header .page-title {
+    margin-right: 2rem;
+  }
+  header .page-title a {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+  section.content h3 {
+    font-size: 38px;
+  }
+  section.content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+
+
 
 /*------------ 960px layout ------------*/
 main.centered {
